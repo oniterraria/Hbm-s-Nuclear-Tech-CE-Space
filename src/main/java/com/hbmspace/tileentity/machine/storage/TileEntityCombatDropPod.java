@@ -128,7 +128,6 @@ public class TileEntityCombatDropPod extends TileEntity implements ITickable, IB
         this.hatchopen2 = buf.readDouble();
     }
 
-    @Override
     public void networkPackNT(int range) {
     }
 

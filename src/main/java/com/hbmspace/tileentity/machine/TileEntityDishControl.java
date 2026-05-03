@@ -105,17 +105,7 @@ public class TileEntityDishControl extends TileEntityMachineBase implements ITic
         linkPosition[2] = buf.readInt();
     }
 
-    @Override
-    public SPacketUpdateTileEntity getUpdatePacket() {
-        NBTTagCompound nbt = new NBTTagCompound();
-        this.writeToNBT(nbt);
-        return new SPacketUpdateTileEntity(this.pos, 0, nbt);
-    }
 
-    @Override
-    public void onDataPacket(@NotNull NetworkManager net, SPacketUpdateTileEntity pkt) {
-        this.readFromNBT(pkt.getNbtCompound());
-    }
 
     public void TryLink(ItemStack stack)
     {
